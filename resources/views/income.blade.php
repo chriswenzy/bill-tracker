@@ -1,0 +1,3 @@
+@extends('cont')
+
+@yield('content')
