@@ -15,6 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('income', function () {
-    return view('income');
-});
+Route::resource('shares', 'ShareController');
