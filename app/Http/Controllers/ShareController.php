@@ -47,7 +47,7 @@ class ShareController extends Controller
          'qty'=> $request->get('qty')
        ]);
        $share->save();
-       return redirect('/shares')->with('success', 'Stock has been added');
+       return redirect('/shares')->with('success', 'Bill has been added');
      }
 
     /**
@@ -96,7 +96,7 @@ class ShareController extends Controller
           $share->qty = $request->get('qty');
           $share->save();
     
-          return redirect('/shares')->with('success', 'Stock has been updated');
+          return redirect('/shares')->with('success', 'Bill has been updated');
     }
 
     /**
@@ -110,6 +110,6 @@ class ShareController extends Controller
         $share = Share::find($id);
      $share->delete();
 
-     return redirect('/shares')->with('success', 'Stock has been deleted Successfully');
+     return redirect('/shares')->with('success', 'Bill has been deleted Successfully');
     }
 }

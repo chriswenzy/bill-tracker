@@ -21,6 +21,7 @@
           <td>Quantity</td>
           <td colspan="2">Action</td>
         </tr>
+       <button> <a href="{{ route('shares.create',$share->id)}}" class="btn btn-success">Add new bill</a></button>
     </thead>
     <tbody>
         @foreach($shares as $share)
@@ -30,7 +31,7 @@
             <td>{{$share->price}}</td>
             <td>{{$share->qty}}</td>
             <td><a href="{{ route('shares.edit',$share->id)}}" class="btn btn-primary">Edit</a></td>
-            <td><a href="{{ route('shares.create',$share->id)}}" class="btn btn-success">Add</a></td>
+         
             <td>
                 <form action="{{ route('shares.destroy', $share->id)}}" method="post">
                   @csrf
